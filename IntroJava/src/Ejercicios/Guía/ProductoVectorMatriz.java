@@ -1,6 +1,4 @@
-package Guía;
-
-import com.sun.security.auth.module.KeyStoreLoginModule;
+package Ejercicios.Guía;
 
 import java.util.Scanner;
 
