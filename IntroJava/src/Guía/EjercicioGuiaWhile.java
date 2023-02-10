@@ -1,3 +1,5 @@
+package Guía;
+
 import java.util.Scanner;
 
 /*Escriba un programa que lea 20 números. Si el número leído es igual a cero se debe salir del

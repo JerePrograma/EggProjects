@@ -1,3 +1,5 @@
+package Guía;
+
 import java.util.Scanner;
 
 public class Main {

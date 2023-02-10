@@ -1,3 +1,5 @@
+package Guía;
+
 import java.util.Scanner;
 
 public class EjemploVideos {
@@ -20,7 +22,6 @@ public class EjemploVideos {
 
         return resultado;
     }
-
     public static void saludoPersonalizado(String nombre) {
         System.out.println("Hola " + nombre + " cómo estás?");
     }

@@ -1,3 +1,5 @@
+package Guía;
+
 import java.util.Scanner;
 
 //Realizar un programa que lea 4 números (comprendidos entre 1 y 20) e imprima el número
@@ -10,7 +12,7 @@ public class AsteriscosPorTeclado {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int num [] = new int[4];
+        int num[] = new int[4];
 
         for (int i = 0; i <= 3; i++) {
             do {
