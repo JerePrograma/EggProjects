@@ -1,4 +1,4 @@
-package ejercicios.guía;
+package ejercicios.guia;
 
 import java.util.Scanner;
 
@@ -18,10 +18,9 @@ public class EjemploVideos {
     }
 
     public static int suma(int a, int b) {
-        int resultado = a + b;
-
-        return resultado;
+        return a + b;
     }
+
     public static void saludoPersonalizado(String nombre) {
         System.out.println("Hola " + nombre + " cómo estás?");
     }

@@ -1,4 +1,4 @@
-package ejercicios.guía;
+package ejercicios.guia;
 
 import java.util.Scanner;
 
@@ -11,19 +11,10 @@ public class EncuestaCondicionales {
 
         if (opinion >= 1 && opinion <= 5) {
             switch (opinion) {
-                case 1:
-                case 2:
-                    System.out.println("Nos sentimos apenados que no hayas disfrutado la peli...");
-                    break;
-                case 3:
-                    System.out.println("Has calificado la peli como buena");
-                    break;
-                case 4:
-                    System.out.println("Has calificado la peli como muy buena");
-                    break;
-                case 5:
-                    System.out.println("Fantástico que haya disfrutado un excelente entretenimiento!");
-                    break;
+                case 1, 2 -> System.out.println("Nos sentimos apenados que no hayas disfrutado la peli...");
+                case 3 -> System.out.println("Has calificado la peli como buena");
+                case 4 -> System.out.println("Has calificado la peli como muy buena");
+                case 5 -> System.out.println("Fantástico que haya disfrutado un excelente entretenimiento!");
             }
         } else if (opinion < 0) {
             System.out.println("¿Una opinión negativa? ¿Taaaan mala fue la película? :c");

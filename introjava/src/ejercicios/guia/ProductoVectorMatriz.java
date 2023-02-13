@@ -1,4 +1,4 @@
-package ejercicios.guía;
+package ejercicios.guia;
 
 import java.util.Scanner;
 
@@ -41,14 +41,14 @@ public class ProductoVectorMatriz {
             }
             producto[j] = sum;
         }
-        String aux = "";
+        StringBuilder aux = new StringBuilder();
 
         //Mostrar vector
         System.out.println("* vector:");
         //bucle for "mejorado" (enchanced)
         //fot (tipo de elemto : arreglo)
         for (int elemento : vector) {
-            aux = aux + " " + elemento;
+            aux.append(" ").append(elemento);
         }
         System.out.println(aux);
 
@@ -57,21 +57,21 @@ public class ProductoVectorMatriz {
         //para cada fila de la matriz
         for (int[] fila : matriz
         ) {
-            aux = "";
+            aux = new StringBuilder();
             //para cada elemento de la fila
             for (int elemento : fila
             ) {
-                aux += " " + elemento;
+                aux.append(" ").append(elemento);
             }
             System.out.println(aux);
         }
 
         //Mostrar resultado
-        aux = "";
+        aux = new StringBuilder();
         System.out.println("/n vector x matriz:");
         for (int elemento : producto
         ) {
-            aux += " " + elemento;
+            aux.append(" ").append(elemento);
         }
         System.out.println(aux);
     }

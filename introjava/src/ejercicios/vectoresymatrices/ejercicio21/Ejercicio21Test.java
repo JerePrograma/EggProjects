@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
 import static ejercicios.vectoresymatrices.ejercicio21.Ejercicio21.MatrizToString;
 import static ejercicios.vectoresymatrices.ejercicio21.Ejercicio21.compararMatriz;
 
@@ -43,9 +41,10 @@ public class Ejercicio21Test {
         System.out.println(MatrizToString(matrizP));
 
         Coordenadas coordenadas = compararMatriz(matrizM, matrizP);
-        System.out.println("Las coordenadas son " + coordenadas.getX() + " " + coordenadas.getY());
 
         Assertions.assertNotNull(coordenadas);
+        System.out.println("Las coordenadas son " + coordenadas.getX() + " " + coordenadas.getY());
+
         Assertions.assertEquals(4, coordenadas.getX());
         Assertions.assertEquals(4, coordenadas.getY());
     }

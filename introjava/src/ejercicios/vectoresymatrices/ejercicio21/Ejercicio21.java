@@ -9,10 +9,10 @@ import java.util.Arrays;
 //que coincida con la matriz P. En ese caso, el programa debe indicar la fila y la columna de
 //la matriz M en la cual empieza el primer elemento de la submatriz P.
 public class Ejercicio21 {
-    private static boolean compararMatriz(int[][] matrizMayor, int[][] matrizPequeña, int x, int y) {
-        for (int i = 0; i < matrizPequeña.length; i++) {
-            for (int j = 0; j < matrizPequeña.length; j++) {
-                if (matrizMayor[x + i][y + j] != matrizPequeña[i][j]) {
+    private static boolean compararMatriz(int[][] matriz, int[][] subMatriz, int x, int y) {
+        for (int i = 0; i < subMatriz.length; i++) {
+            for (int j = 0; j < subMatriz.length; j++) {
+                if (matriz[x + i][y + j] != subMatriz[i][j]) {
                     return false;
                 }
             }
@@ -20,10 +20,10 @@ public class Ejercicio21 {
         return true;
     }
 
-    public static Coordenadas compararMatriz(int[][] matrizMayor, int[][] matrizPequeña) {
-        for (int i = 0; i < matrizMayor.length - matrizPequeña.length; i++) {
-            for (int j = 0; j < matrizMayor.length - matrizPequeña.length; j++) {
-                if (compararMatriz(matrizMayor, matrizPequeña, i, j)) {
+    public static Coordenadas compararMatriz(int[][] matriz, int[][] subMatriz) {
+        for (int i = 0; i < matriz.length - subMatriz.length; i++) {
+            for (int j = 0; j < matriz.length - subMatriz.length; j++) {
+                if (compararMatriz(matriz, subMatriz, i, j)) {
                     return new Coordenadas(i, j);
                 }
             }

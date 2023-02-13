@@ -34,32 +34,30 @@ public class Ejercicio11 {
             System.out.println("5. Salir");
             opcion = sc.nextInt();
             switch (opcion) {
-                case 1:
+                case 1 -> {
                     int suma = num1 + num2;
                     System.out.println(suma);
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     int resta = num1 - num2;
                     System.out.println(resta);
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     int multiplicacion = num1 * num2;
                     System.out.println(multiplicacion);
-                    break;
-                case 4:
+                }
+                case 4 -> {
                     int division = num1 / num2;
                     System.out.println(division);
-                    break;
-                case 5:
+                }
+                case 5 -> {
                     System.out.println("¿Está seguro que desea salir del programa (S/N)?");
                     respuesta = sc.next();
                     if (respuesta.equalsIgnoreCase("S")) {
                         System.out.println("Ha salido exitosamente del programa");
                         bucle = false;
-                        break;
-                    } else {
-                        continue;
                     }
+                }
             }
         } while (bucle);
     }

@@ -21,6 +21,6 @@ public class Ejercicio4Extras {
                 roman.append(letrasRomanas[i]);
             }
         }
-        System.out.println("El número en romano es: " + roman.toString());
+        System.out.println("El número en romano es: " + roman);
     }
 }
