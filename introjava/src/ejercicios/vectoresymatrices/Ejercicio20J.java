@@ -10,9 +10,8 @@ public class Ejercicio20J {
 
     public static int sumatoriaFila(int[][] matriz, int fila) {
         int sum = 0;
-        int cantidadColumnas = matriz.length;
-        for (int columna = 0; columna < cantidadColumnas; columna++) {
-            sum += matriz[columna][fila];
+        for (int[] ints : matriz) {
+            sum += ints[fila];
         }
         return sum;
     }
@@ -53,7 +52,7 @@ public class Ejercicio20J {
                 matriz[i][j] = (int) (Math.random() * 10);
                 System.out.print(matriz[i][j] + " ");
             }
-            System.out.println("");
+            System.out.println();
         }
     }
 }

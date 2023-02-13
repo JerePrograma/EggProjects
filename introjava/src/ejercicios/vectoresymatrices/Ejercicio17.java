@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Ejercicio17 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int vector[];
+        int[] vector;
         System.out.println("Ingresa la dimensión del vector");
         int n = sc.nextInt();
         vector = new int[n];

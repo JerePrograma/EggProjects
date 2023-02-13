@@ -13,18 +13,16 @@ public class Ejercicio20 {
                 matriz[i][j] = (int) (Math.random() * 10);
                 System.out.print(matriz[i][j] + " ");
             }
-            System.out.println("");
+            System.out.println();
         }
         verificar(matriz);
     }
 
-    public static boolean verificar(int[][] matriz) {
+    public static void verificar(int[][] matriz) {
         int sumaEsperada = matriz[0][0] + matriz[1][1] + matriz[2][2];
         int sumaFila;
         int sumaColumna;
-        int sumaDiagonal = 0;
         int sumaInversa = 0;
-        boolean aux = false;
         for (int i = 0; i < matriz.length; i++) {
             sumaFila = 0;
             sumaColumna = 0;
@@ -37,18 +35,17 @@ public class Ejercicio20 {
             }
             if (sumaEsperada != sumaFila) {
                 System.out.println("La matriz NO es mágica");
-                return false;
+                break;
             }
             if (sumaEsperada != sumaColumna) {
                 System.out.println("La matriz NO es mágica");
-                return false;
+                break;
             }
         }
         if (sumaEsperada != sumaInversa) {
             System.out.println("La matriz NO es mágica");
-            return false;
+        } else {
+            System.out.println("La matriz es mágica");
         }
-        System.out.println("La matriz es mágica");
-        return true;
     }
 }

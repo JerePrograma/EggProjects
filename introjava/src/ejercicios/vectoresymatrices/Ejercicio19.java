@@ -8,13 +8,13 @@ import java.util.Random;
 //denota por AT y se obtiene cambiando sus filas por columnas (o viceversa)
 public class Ejercicio19 {
     public static void main(String[] args) {
-        int matrizA[][] = new int[4][4];
-        int matrizB[][] = new int[4][4];
+        int[][] matrizA = new int[4][4];
+        int[][] matrizB = new int[4][4];
 
         Random claseRandom = new Random();
 
         System.out.println("MATRIZ A");
-        System.out.println("");
+        System.out.println();
         for (int i = 0; i < matrizA.length; i++) {
             for (int j = 0; j < matrizA.length; j++) {
                 int randomInt = -1 + claseRandom.nextInt(1 + 1);
@@ -25,7 +25,7 @@ public class Ejercicio19 {
                     System.out.print(matrizA[i][j] + " ");
                 }
             }
-            System.out.println("");
+            System.out.println();
         }
         for (int i = 0; i < matrizB.length; i++) {
             for (int j = 0; j < matrizB.length; j++) {
@@ -39,31 +39,31 @@ public class Ejercicio19 {
                     antiSimetrica = true;
                 } else {
                     antiSimetrica = false;
-                    System.out.println("");
+                    System.out.println();
                     System.out.println("La matriz no es antisimétrica");
                     break;
                 }
             }
-            if (antiSimetrica == false) {
+            if (!antiSimetrica) {
                 break;
             }
         }
-        if (antiSimetrica == true) {
-            System.out.println("");
+        if (antiSimetrica) {
+            System.out.println();
             System.out.println("La matriz es antisimétrica");
         }
-        System.out.println("");
+        System.out.println();
         System.out.println("MATRIZ B");
-        System.out.println("");
-        for (int i = 0; i < matrizB.length; i++) {
+        System.out.println();
+        for (int[] ints : matrizB) {
             for (int j = 0; j < matrizB.length; j++) {
-                if (matrizB[i][j] >= 0) {
-                    System.out.print("+" + matrizB[i][j] + " ");
+                if (ints[j] >= 0) {
+                    System.out.print("+" + ints[j] + " ");
                 } else {
-                    System.out.print(matrizB[i][j] + " ");
+                    System.out.print(ints[j] + " ");
                 }
             }
-            System.out.println("");
+            System.out.println();
         }
     }
 }
