@@ -38,7 +38,5 @@ public class Persona {
         return altura;
     }
 
-    public void setAltura(int altura) {
-        this.altura = altura;
-    }
+
 }
