@@ -37,6 +37,4 @@ public class Persona {
     public int getAltura() {
         return altura;
     }
-
-
 }
