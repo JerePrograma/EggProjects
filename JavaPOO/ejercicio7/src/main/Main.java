@@ -3,6 +3,9 @@ package main;
 import entidad.Persona;
 import service.Servicio;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /*
 Realizar una clase llamada Persona que tenga los siguientes atributos: nombre, edad,
 sexo ('H' hombre, 'M' mujer, 'O' otro), peso y altura. Si el alumno desea añadir algún otro
@@ -31,10 +34,57 @@ persona es mayor de edad.
 Por último, guardaremos los resultados de los métodos calcularIMC y esMayorDeEdad en
 distintas variables, para después en el main, calcular un porcentaje de esas 4 personas
 cuantas están por debajo de su peso, cuantas en su peso ideal y cuantos, por encima, y
-también calcularemos un porcentaje de cuantos son mayores de edad y cuantos menore
+también calcularemos un porcentaje de cuantos son mayores de edad y cuantos menores
 */
 public class Main {
     public static void main(String[] args) {
-        
+        List<Persona> personas = new ArrayList<>();
+        Servicio servicio = new Servicio();
+        Persona persona1 = servicio.crearPersona();
+        Persona persona2 = servicio.crearPersona();
+        Persona persona3 = servicio.crearPersona();
+        Persona persona4 = servicio.crearPersona();
+        Persona persona5 = new Persona("Jeremías", 28, "H", 96, 168);
+        personas.add(persona1);
+        personas.add(persona2);
+        personas.add(persona3);
+        personas.add(persona4);
+
+        int menores = 0;
+        int mayores = 0;
+        int pesoIdeal = 0;
+        int pesoMenor = 0;
+        int pesoMayor = 0;
+        double imc;
+        boolean mayor;
+        for (Persona personas2 : personas) {
+            System.out.println(personas2.toString());
+            imc = servicio.calcularIMC(personas2);
+            if (imc == 0) {
+                pesoIdeal++;
+            } else if (imc == -1) {
+                pesoMenor++;
+            } else {
+                pesoMayor++;
+            }
+            mayor = servicio.esMayorDeEdad(personas2);
+            servicio.esMayorDeEdad(personas2);
+            if (mayor) {
+                mayores++;
+            } else {
+                menores++;
+            }
+        }
+        System.out.println(persona5);
+        double promedioMayores = (float) mayores * 100 / personas.size();
+        System.out.println("El promedio de las personas mayores es de: " + promedioMayores);
+        double promedioMenores = (float) menores * 100 / personas.size();
+        System.out.println("El promedio de las personas mayores es de: " + promedioMenores);
+        double promedioPesoIdeal = (float) pesoIdeal * 100 / personas.size();
+        System.out.println("El promedio de las personas con peso ideal es de: " + promedioPesoIdeal);
+        double promedioPesoMenor = (float) pesoMenor * 100 / personas.size();
+        System.out.println("El promedio de las personas con peso ideal es de: " + promedioPesoMenor);
+        double promedioPesoMayor = (float) pesoMayor * 100 / personas.size();
+        System.out.println("El promedio de las personas con peso ideal es de: " + promedioPesoMayor);
     }
 }

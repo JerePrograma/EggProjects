@@ -28,7 +28,7 @@ persona es mayor de edad.
 Por último, guardaremos los resultados de los métodos calcularIMC y esMayorDeEdad en
 distintas variables, para después en el main, calcular un porcentaje de esas 4 personas
 cuantas están por debajo de su peso, cuantas en su peso ideal y cuantos, por encima, y
-también calcularemos un porcentaje de cuantos son mayores de edad y cuantos menore
+también calcularemos un porcentaje de cuantos son mayores de edad y cuantos menores
 */
 public class Persona {
     private String nombre;
@@ -48,10 +48,6 @@ public class Persona {
     public Persona() {
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -62,10 +58,6 @@ public class Persona {
 
     public void setEdad(int edad) {
         this.edad = edad;
-    }
-
-    public String getSexo() {
-        return sexo;
     }
 
     public void setSexo(String sexo) {
@@ -86,5 +78,16 @@ public class Persona {
 
     public void setAltura(double altura) {
         this.altura = altura;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "nombre='" + nombre + '\'' +
+                ", edad=" + edad +
+                ", sexo='" + sexo + '\'' +
+                ", peso=" + peso +
+                ", altura=" + altura +
+                '}';
     }
 }

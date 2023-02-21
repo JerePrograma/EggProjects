@@ -32,7 +32,7 @@ persona es mayor de edad.
 Por último, guardaremos los resultados de los métodos calcularIMC y esMayorDeEdad en
 distintas variables, para después en el main, calcular un porcentaje de esas 4 personas
 cuantas están por debajo de su peso, cuantas en su peso ideal y cuantos, por encima, y
-también calcularemos un porcentaje de cuantos son mayores de edad y cuantos menore
+también calcularemos un porcentaje de cuantos son mayores de edad y cuantos menores
 */
 public class Servicio {
     Scanner sc = new Scanner(System.in);
@@ -44,17 +44,43 @@ public class Servicio {
         System.out.println("Ingrese la edad");
         persona.setEdad(sc.nextInt());
         System.out.println("Ingrese el sexo");
-        String sexo = String.valueOf(sc.next().charAt(0));
-        sexo = sexo.toUpperCase();
-        if (sexo.equals("O") || sexo.equals("H") || sexo.equals("M")) {
-            persona.setSexo(sexo);
-        } else {
-            System.out.println("Error, no se reconoce el sexo ingresado");
-        }
+        String sexo;
+        do {
+            sexo = String.valueOf(sc.next().charAt(0));
+            sexo = sexo.toUpperCase();
+            if (!(sexo.equals("O") || sexo.equals("H") || sexo.equals("M"))) {
+                System.out.println("Error, no se reconoce el sexo ingresado");
+                System.out.println("Ingrese el sexo devuelta");
+            }
+        } while (!(sexo.equals("O") || sexo.equals("H") || sexo.equals("M")));
+
+        persona.setSexo(sexo);
         System.out.println("Ingrese el peso");
         persona.setPeso(sc.nextDouble());
         System.out.println("Ingrese la altura");
         persona.setAltura(sc.nextDouble());
         return persona;
+    }
+
+    public double calcularIMC(Persona persona) {
+        double kg = persona.getPeso();
+        double altura = persona.getAltura() / 100;
+        double imc = kg / (altura * altura);
+        System.out.println(imc);
+        if (imc < 20) {
+            System.out.println("La persona está por debajo de su peso ideal");
+            imc = -1;
+        } else if (imc >= 20 && imc <= 25) {
+            System.out.println("La persona está en su peso ideal");
+            imc = 0;
+        } else {
+            System.out.println("La persona está por encima de su peso ideal");
+            imc = 1;
+        }
+        return imc;
+    }
+
+    public boolean esMayorDeEdad(Persona persona) {
+        return persona.getEdad() > 18;
     }
 }
