@@ -31,4 +31,18 @@ public class RectanguloService {
     public int perimetro(Rectangulo rectangulo) {
         return (rectangulo.getAltura() + rectangulo.getBase()) * 2;
     }
+
+    public StringBuffer dibujarRectangulo(Rectangulo rectangulo, StringBuffer palabra) {
+        for (int i = 0; i < rectangulo.getAltura(); i++) {
+            for (int j = 0; j < rectangulo.getBase(); j++) {
+                if (i == 0 || j == 0 || j == rectangulo.getBase() - 1 || i == rectangulo.getAltura() - 1) {
+                    palabra.append("* ");
+                } else {
+                    palabra.append("  ");
+                }
+            }
+            palabra.append("\n");
+        }
+        return palabra;
+    }
 }

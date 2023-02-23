@@ -21,5 +21,8 @@ public class Main {
         System.out.println("El perímetro del rectángulo es " + rectanguloService.perimetro(rectangulo));
         System.out.println("La superficie del rectángulo es " + rectanguloService.superficie(rectangulo2));
         System.out.println("El perímetro del rectángulo es " + rectanguloService.perimetro(rectangulo2));
+        StringBuffer palabra = new StringBuffer();
+        palabra = (rectanguloService.dibujarRectangulo(rectangulo,palabra));
+        System.out.println(palabra);
     }
 }
