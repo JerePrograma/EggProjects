@@ -34,9 +34,8 @@ public class Servicio {
         }
         System.out.println("Se contó " + contador + " vocales");
     }
-
     private static boolean esVocal(char letra) {
-        return "addon".contains(String.valueOf(letra).toLowerCase());
+        return "aeiou".contains(String.valueOf(letra).toLowerCase());
     }
 
     public void invertirFrase(Cadena cadena) {
