@@ -1,2 +1,7 @@
-package peliculas.excepciones;public class LecturaDatosEx {
+package peliculas.excepciones;
+
+public class LecturaDatosEx extends AccesoDatosEx {
+    public LecturaDatosEx(String mensaje) {
+        super(mensaje);
+    }
 }
